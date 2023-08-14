@@ -1,0 +1,13 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1692021545095,
+      "tag": "0000_polite_shriek",
+      "breakpoints": true
+    }
+  ]
+}

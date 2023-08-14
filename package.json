@@ -6,20 +6,32 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "migrate:introspect": "drizzle-kit introspect:pg --config=drizzle.config.ts",
+    "migrate:generate": "drizzle-kit generate:pg",
+    "migrate:push": "drizzle-kit push:pg",
+    "migrate:drop": "drizzle-kit drop --config=drizzle.config.ts"
   },
   "dependencies": {
+    "@auth/drizzle-adapter": "^0.3.1",
     "@types/node": "20.4.10",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.14",
+    "dotenv": "^16.3.1",
+    "drizzle-orm": "^0.28.2",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.13",
     "next": "13.4.13",
+    "next-auth": "^4.23.0",
     "postcss": "8.4.27",
+    "postgres": "^3.3.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.19.12"
   }
 }
