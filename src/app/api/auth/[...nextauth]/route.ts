@@ -1,15 +1,18 @@
 import NextAuth from "next-auth";
-import GoogleProvider from "next-auth/providers/google";
-import { DrizzleAdapter } from "@auth/drizzle-adapter";
-import { db } from "./schema";
+import GithubProvider from "next-auth/providers/github";
+import { SupabaseAdapter } from "@next-auth/supabase-adapter"; // On the website: @auth/supabase-adapter so this will change in a future PR
 
-export default NextAuth({
-  // @ts-ignore
-  adapter: DrizzleAdapter(db),
+const handler = NextAuth({
   providers: [
-    GoogleProvider({
-      clientId: process.env.GITHUB_CLIENT_ID,
-      clientSecret: process.env.GITHUB_CLIENT_SECRET,
+    GithubProvider({
+      clientId: process.env.GITHUB_CLIENT_ID ?? "",
+      clientSecret: process.env.GITHUB_CLIENT_SECRET ?? "",
     }),
   ],
+  adapter: SupabaseAdapter({
+    url: process.env.NEXT_PUBLIC_SUPABASE_URL ?? "",
+    secret: process.env.SUPABASE_SERVICE_ROLE_KEY ?? "",
+  }),
 });
+
+export { handler as GET, handler as POST };
