@@ -8,13 +8,15 @@
     "start": "next start",
     "lint": "next lint",
     "migrate:introspect": "drizzle-kit introspect:pg --config=drizzle.config.ts",
-    "migrate:generate": "drizzle-kit generate:pg",
-    "migrate:push": "drizzle-kit push:pg",
-    "migrate:drop": "drizzle-kit drop --config=drizzle.config.ts"
+    "migrate:generate": "drizzle-kit generate:pg --config=drizzle.config.ts",
+    "migrate:push": "drizzle-kit push:pg --config=drizzle.config.ts",
+    "migrate:drop": "drizzle-kit drop --config=drizzle.config.ts",
+    "update-types": "npx supabase gen types typescript --project-id abdoijpvkuyzsobprqok > ./src/app/lib/database.types.ts"
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^0.3.1",
-    "@supabase/supabase-js": "^2.32.0",
+    "@supabase/auth-helpers-nextjs": "^0.7.4",
+    "@supabase/supabase-js": "^2.33.1",
     "@types/node": "20.4.10",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
@@ -33,6 +35,7 @@
   },
   "devDependencies": {
     "drizzle-kit": "^0.19.12",
-    "encoding": "^0.1.13"
+    "encoding": "^0.1.13",
+    "supabase": "^1.88.0"
   }
 }
