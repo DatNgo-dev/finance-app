@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "src/app/lib/db/migrations/*.sql"
+      - "src/lib/db/migrations/*.sql"
   workflow_dispatch:
 
 jobs:
