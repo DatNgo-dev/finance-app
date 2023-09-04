@@ -15,6 +15,13 @@
       "when": 1693030786194,
       "tag": "0001_many_tempest",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1693830045562,
+      "tag": "0002_opposite_pestilence",
+      "breakpoints": true
     }
   ]
 }

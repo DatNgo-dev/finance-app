@@ -1,0 +1,38 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "id": "da720945-19ff-4348-8001-d9d2b9f18925",
+  "prevId": "8aa148ce-3cff-4bee-ad2a-6890112a05a8",
+  "tables": {
+    "profile": {
+      "name": "profile",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "gender": {
+          "name": "gender",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "'null'"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  }
+}

@@ -1,10 +1,10 @@
 "use client";
-import Login from "./components/client/auth/Login";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Login></Login>
+      <Link href={"/login"}>Sign In</Link>
     </main>
   );
 }
