@@ -11,7 +11,7 @@
     "migrate:generate": "drizzle-kit generate:pg --config=drizzle.config.ts",
     "migrate:push": "drizzle-kit push:pg --config=drizzle.config.ts",
     "migrate:drop": "drizzle-kit drop --config=drizzle.config.ts",
-    "update-types": "npx supabase gen types typescript --project-id abdoijpvkuyzsobprqok > ./src/app/lib/database.types.ts"
+    "update-types": "npx supabase gen types typescript --project-id abdoijpvkuyzsobprqok > ./src/lib/database.types.ts"
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^0.3.1",
