@@ -9,7 +9,6 @@ export async function middleware(req: NextRequest) {
   const pathname = req.nextUrl.pathname;
 
   const supabase = createMiddlewareClient<Database>({ req, res });
-
   const {
     data: { session },
   } = await supabase.auth.getSession();

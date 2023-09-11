@@ -65,7 +65,12 @@ export default function SupabaseAuthProvider({
 
   // Sign-In with Github
   const signInWithGithub = async () => {
-    await supabase.auth.signInWithOAuth({ provider: "github" });
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "github",
+      options: {
+        redirectTo: "http://localhost:3000/api/callback",
+      },
+    });
   };
 
   // Sign-In with Email
