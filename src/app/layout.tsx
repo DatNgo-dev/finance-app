@@ -27,7 +27,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <SupabaseProvider>
-        <SupabaseAuthProvider>
+        <SupabaseAuthProvider serverSession={session}>
           <body className={inter.className}>{children}</body>
         </SupabaseAuthProvider>
       </SupabaseProvider>
